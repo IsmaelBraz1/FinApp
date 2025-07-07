@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../public/css/login.css">
+</head>
+<body>
+
+    <div class="logo">
+        <img src="../public/img/logo_name_finapp.svg" alt="FinApp Logo" id="logo-do-finapp" />     
+    </div>
+
+    <div class="login-container">
+
+        <h2>Crie sua conta no FinApp</h2>
+        <p>Se cadastre no FinApp e aproveite tudo o que ele oferece.</p>
+
+        <form class="login-form">
+            
+            <p id="erro_login"> </p>
+            <label for="nome">Nome</label>
+            <input type="name" id="nome" placeholder="Digite seu nome">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email_c" placeholder="Digite seu e-mail" />
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha_c" placeholder="Digite sua senha" />
+            <br>
+            <button id="botao-criar" type="submit">
+                CRIAR CONTA
+            </button>
+            <a href="index.html" id="cadastro">Já possui conta, Clique aqui para entrar.</a>
+    </form>
+    </div>
+     <!--Sccript para quando clicar no botão ENTRAR seja direcionado para o painel de finanças-->
+     <script src="../public/js/login.js"></script>
+     <script src="../public/js/cadastro.js"></script>
+
+
+
+
+</body>
+</html>

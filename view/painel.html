@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte Painel</title>
+    <link rel="stylesheet" href="../public/css/painel.css">
+</head>
+<body>
+        <header>
+        <h1>Painel Financeiro</h1>
+        <p> Bem-vindo de volta, Usuário</p>
+        </header>
+
+    <div id="later">
+    <div id="detalhe">
+        <img class="ima" src="../public/img/logofinapp.svg" alt="logofin" width="150" height="145">
+       </div>
+    <div id="opcao">
+        <div id="topo">
+        <img src="../public/img/logo_name_finapp.svg" alt="logo" width="150" height="100">
+        </div>
+        <button id="vai" class="b_lat" > Painel </button>
+        <button class="b_lat"> Transações </button>
+        <button class="b_lat"> Metas </button>
+        <button class="b_lat"> Configurações </button>
+        <button class="b_lat" onclick='setTimeout(() => {window.location.href = "../tela de login do FinApp/index.html"},2000);'> Sair </button>
+        
+    </div>
+    </div>
+
+    <script defer src="script.js"></script>
+
+    <main>
+        <section id="grups">
+        <div class="graf">
+            <h2>Saldo Total</h2>
+            <h2 id="valor1">R$ 12.345,67</h2>
+            <p> +2.5% desde o ultimo mês</p>
+
+        </div>
+        <div class="graf">
+            <h2>Renda Mensal</h2>
+            <h2 id="valor2">R$ 5.800,00</h2>
+            <p> Atualizado hoje</p>
+
+        </div>       
+        <div class="graf">
+            <h2>Despesas Mensais</h2>
+            <h2 id="valor3">R$ 2.150,75</h2>
+            <p> 75% da meta atingida </p>
+        </div>
+
+        </section>
+        <section class="grafico">
+            
+        </section>
+          
+    </main>
+
+    <div id="mais" onclick="document.getElementById('adicionar').style.visibility = 'visible'"> + </div>
+
+    <div id="adicionar">
+        <div id="fechar" onclick="document.getElementById('adicionar').style.visibility = 'hidden'">x</div>
+    </div>
+    
+    
+</body>
+</html>
