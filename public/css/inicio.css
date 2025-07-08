@@ -1,0 +1,97 @@
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Evita barras de rolagem durante a animação */
+}
+
+/* Container principal que centraliza tudo */
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    color: #ffffff;
+    text-align: center;
+    /* Fundo com gradiente profissional */
+    background: linear-gradient(135deg, #1D2B64, #3B5998); /* Gradiente de azul escuro */
+    padding: 20px;
+}
+
+/* Animação de entrada (fade in e subir) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    /* Aplica a animação a todos os elementos dentro do .content */
+    animation: fadeIn 1s ease-out forwards;
+}
+
+
+/* Estilo do Logo/Título */
+.logo-text {
+    font-size: 4.5rem; /* Tamanho grande para impacto */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo do Slogan/Subtítulo */
+.tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    max-width: 500px; /* Evita que a linha fique muito longa em telas grandes */
+    opacity: 0.9;
+}
+
+/* Estilo do Botão de Ação (Call to Action) */
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #4CAF50; /* Verde para ação positiva */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px; /* Botão "pilula" moderno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: #45a049; /* Cor mais escura no hover */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para telas menores (celulares) */
+@media (max-width: 600px) {
+    .logo-text {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
