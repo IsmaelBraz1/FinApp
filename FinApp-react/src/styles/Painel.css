@@ -207,7 +207,6 @@ main{
     line-height: 1.2rem;
     border-radius: 1rem;
     color: rgba(13, 13, 44, 0.8);
-    visibility: hidden;
     position: fixed;
     top: 3rem;
     left: 15%;
