@@ -1,0 +1,19 @@
+/* src/index.css */
+
+/* 1. Importa as fontes do Google para toda a aplicação */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+/* 2. CSS Reset: Remove todos os espaçamentos padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Estilos base para HTML e BODY */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif; /* Fonte padrão da aplicação */
+  /* Note que NÃO definimos um background aqui, pois cada página tem o seu */
+}

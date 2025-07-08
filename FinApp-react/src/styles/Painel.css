@@ -92,10 +92,15 @@
 }
 
 
-body{
-    margin: 3rem 2rem 3rem 5.5rem ;
+.painel-container {
+    /* Removemos o margin antigo */
+
+    /* Adicionamos padding para dar espaço ao conteúdo, mas o fundo ocupa tudo */
+    padding: 3rem 2rem 3rem 5.5rem; 
+
     background-color: rgb(222, 226, 230);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh; /* Garante que o container ocupe no mínimo toda a altura da tela */
 }
 
 header{
@@ -124,23 +129,38 @@ main{
     
 }
 
-.graf{
-    
-    border: 2rem solid white;
-    background-color: white;
-    width: 15rem;
-    height: 5rem;
-    border-radius: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
-    color: rgba(13, 13, 44, 0.7);
-}
-.graf h2, .graf p{
-    margin: 0;
-    padding: 0;
+/* src/styles/Painel.css - VERSÃO CORRIGIDA E UNIFICADA */
+
+.graf {
+  /* --- Layout Interno do Card --- */
+  display: flex;
+  flex-direction: column; /* Itens em coluna: Título, Valor, Descrição */
+  justify-content: space-around; /* Distribui o espaço verticalmente */
+  
+  /* --- Tamanho e Espaçamento --- */
+  width: 16rem;      /* Largura do card */
+  min-height: 9rem; /* Altura MÍNIMA, mas pode crescer se o conteúdo precisar */
+  padding: 1.25rem;   /* Espaçamento interno (20px) */
+  
+  /* --- Estilo Visual --- */
+  background-color: white;
+  border-radius: 1rem; /* Bordas arredondadas */
+  color: rgba(13, 13, 44, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+  text-align: left; /* Alinha o texto à esquerda dentro do card */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+.graf:hover {
+  transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Garante que os títulos e parágrafos dentro do card não tenham margens estranhas */
+.graf h2, .graf p {
+  margin: 0;
+  padding: 0;
+}
 
 #valor1,#valor2,#valor3{
     font-size: 2.3rem;
