@@ -2,11 +2,33 @@
 import React, { useState } from 'react';
 import MenuLateral from './MenuLateral';       // Importando os componentes que criamos
 import CardResumo from './CardResumo';
+import FormularioTransacao from './FormularioTransacao';
+import ListaTransacoes from './ListaTransacoes';
 import '../styles/Painel.css';                // Importando o CSS do painel
+
+
+// Dados de exemplo para começar
+const DADOS_INICIAIS = [
+  { id: 1, descricao: 'Salário Mensal', valor: 5800.00, data: 'Ontem', tipo: 'receita', categoria: 'Salário' },
+  { id: 2, descricao: 'Conta de Internet', valor: 99.90, data: '20 Maio, 2024', tipo: 'despesa', categoria: 'Contas' },
+  { id: 3, descricao: 'Supermercado Compras', valor: 185.50, data: 'Hoje, 14:30', tipo: 'despesa', categoria: 'Alimentação' },
+  { id: 4, descricao: 'Jantar com Amigos', valor: 120.00, data: '18 Maio, 2024', tipo: 'despesa', categoria: 'Lazer' },
+];
 
 function Painel() {
   // Estado para controlar a visibilidade do modal de adicionar
   const [modalVisivel, setModalVisivel] = useState(false);
+
+// 1. NOVO ESTADO: Lista de Transações
+  const [transacoes, setTransacoes] = useState(DADOS_INICIAIS);
+ // 2. NOVA FUNÇÃO: Adiciona uma nova transação à lista
+  const adicionarTransacao = (novaTransacao) => {
+    // Adiciona um ID único (simplificado para o exemplo)
+    const transacaoComId = { ...novaTransacao, id: Date.now() };
+    // Atualiza o estado com a nova transação no início da lista
+    setTransacoes([transacaoComId, ...transacoes]);
+    setModalVisivel(false);
+  };
 
   return (
     <div className="painel-container">
@@ -27,6 +49,8 @@ function Painel() {
         <section className="grafico">
           {/* Espaço para o gráfico futuro */}
         </section>
+
+         <ListaTransacoes transacoes={transacoes} />
       </main>
 
       {/* Botão de Adicionar - ao clicar, muda o estado para true */}
@@ -34,11 +58,11 @@ function Painel() {
 
       {/* Renderização condicional do Modal: só aparece se modalVisivel for true */}
       {modalVisivel && (
-        <div id="adicionar">
-          {/* Botão de fechar - ao clicar, muda o estado para false */}
-          <div id="fechar" onClick={() => setModalVisivel(false)}>x</div>
-          <h2>Adicionar Transação</h2>
-          {/* Formulário de adição viria aqui */}
+        <div className="modal-backdrop"> {/* Adicionamos o backdrop aqui */}
+          <div id="adicionar">
+            <div id="fechar" onClick={() => setModalVisivel(false)}>x</div>
+            <FormularioTransacao onAdicionar={adicionarTransacao} /> 
+          </div>
         </div>
       )}
     </div>

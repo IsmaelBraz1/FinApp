@@ -1,0 +1,69 @@
+/* src/styles/ItemTransacao.css */
+.item-transacao {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.icone-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.info-transacao {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Faz esta parte ocupar o espaço disponível */
+}
+
+.descricao {
+  font-weight: bold;
+  color: #333;
+}
+
+.categoria {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.valor-transacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinha o texto à direita */
+}
+
+.valor-receita, .valor-despesa {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.valor-receita {
+  color: #28a745; /* Verde para receita */
+}
+
+.valor-despesa {
+  color: #dc3545; /* Vermelho para despesa */
+}
+
+.data {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.item-transacao:hover {
+  background-color: #f8f9fa; /* Um cinza bem claro para o fundo */
+  transform: translateY(-3px);   /* Levanta o item um pouquinho */
+  cursor: pointer;              /* Muda o cursor para a "mãozinha" */
+  border-radius: 8px;           /* Arredonda as bordas no hover para ficar mais bonito */
+  padding: 1rem;                /* Adiciona padding para o fundo não ficar colado nas bordas */
+  margin: 0 -1rem;              /* Compensa o padding para manter o alinhamento */
+}
