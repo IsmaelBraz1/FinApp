@@ -1,0 +1,36 @@
+/* src/styles/Filtros.css */
+.filtros-container {
+  display: flex;
+  gap: 1rem; /* Espaço entre os filtros */
+  margin-bottom: 2rem; /* Espaço abaixo dos filtros */
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  flex-wrap: wrap; /* Permite que os filtros quebrem a linha em telas menores */
+}
+
+.filtro-input, .filtro-select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex-grow: 1; /* Faz com que os campos tentem ocupar o espaço disponível */
+}
+
+.filtro-input {
+  min-width: 250px; /* Largura mínima para o campo de busca */
+}
+
+.limpar-button {
+  padding: 0.75rem;
+  border: 1px solid #6c757d;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.limpar-button:hover {
+  background-color: #5a6268;
+}

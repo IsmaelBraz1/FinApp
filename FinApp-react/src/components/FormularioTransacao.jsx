@@ -81,13 +81,13 @@ function FormularioTransacao(props) {
         <label htmlFor="categoria">Categoria</label>
         <select id="categoria" value={categoria} onChange={(e) => setCategoria(e.target.value)} required>
           <option value="" disabled>Selecione...</option>
-          <option value="alimentacao">Alimentação</option>
-          <option value="moradia">Moradia</option>
-          <option value="transporte">Transporte</option>
-          <option value="lazer">Lazer</option>
-          <option value="saude">Saúde</option>
-          <option value="salario">Salário</option>
-          <option value="outros">Outros</option>
+          <option value="Alimentação">Alimentação</option>
+          <option value="Moradia">Moradia</option>
+          <option value="Transporte">Transporte</option>
+          <option value="Lazer">Lazer</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Salário">Salário</option>
+          <option value="Outros">Outros</option>
         </select>
       </div>
 

@@ -9,7 +9,12 @@ import { FaShoppingCart, FaBriefcase, FaFileInvoiceDollar, FaUsers, FaHeartbeat,
 const formatarValor = (valor) => {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 };
-
+const formatarData = (dataString) => {
+  // Adicionar 'T00:00:00' evita que o fuso horário mude a data
+  const data = new Date(dataString + 'T00:00:00');
+  const options = { day: '2-digit', month: 'short', year: 'numeric' };
+  return data.toLocaleDateString('pt-BR', options);
+};
 // Função para escolher o ícone e a cor baseada na categoria
 const getEstiloCategoria = (categoria) => {
   switch (categoria.toLowerCase()) {
@@ -44,7 +49,7 @@ function ItemTransacao({ transacao }) {
         <span className={transacao.tipo === 'receita' ? 'valor-receita' : 'valor-despesa'}>
           {transacao.tipo === 'receita' ? '+' : '-'} {formatarValor(transacao.valor)}
         </span>
-        <span className="data">{transacao.data}</span>
+        <span className="data">{formatarData(transacao.data)}</span>
       </div>
     </div>
   );

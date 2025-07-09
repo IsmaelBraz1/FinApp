@@ -1,7 +1,7 @@
 // src/components/MenuLateral.jsx
 import React from 'react';
 import '../styles/Painel.css';   
-import { useNavigate } from 'react-router-dom'; // Para a navegação programática
+import { Link, useNavigate } from 'react-router-dom'; // Para a navegação programática
 
 function MenuLateral() {
   const navigate = useNavigate(); // Inicializa o hook de navegação
@@ -20,8 +20,8 @@ function MenuLateral() {
         <div id="topo">
           <img src="/img/logo_name_finapp.svg" alt="logo" width="150" height="100" />
         </div>
-        <button className="b_lat">Painel</button>
-        <button className="b_lat">Transações</button>
+        <Link to="/dashboard" className="b_lat">Painel</Link>
+        <Link to="/transacoes" className="b_lat">Transações</Link>
         <button className="b_lat">Metas</button>
         <button className="b_lat">Configurações</button>
         <button className="b_lat" onClick={handleSair}>Sair</button>
