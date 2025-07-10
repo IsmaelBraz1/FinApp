@@ -1,4 +1,3 @@
-// src/components/Filtros.jsx
 import React from 'react';
 import '../styles/Filtros.css';
 
@@ -20,7 +19,6 @@ function Filtros({
         onChange={(e) => onFiltroTextoChange(e.target.value)}
       />
 
-{/* NOVO FILTRO DE MÊS/ANO */}
       <input 
         type="month"
         className="filtro-select"

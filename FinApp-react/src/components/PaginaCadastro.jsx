@@ -1,17 +1,14 @@
-// src/components/PaginaCadastro.jsx
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/PaginaLogin.css'; // 1. Reutilizando o mesmo CSS! Não precisamos criar outro.
+import '../styles/PaginaLogin.css'; 
 
 function PaginaCadastro() {
-  // 2. Criamos estados para os três campos do formulário e para o erro.
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // 3. Função para lidar com o envio do formulário de cadastro
+  //Função para lidar com o envio do formulário de cadastro
   const handleCadastro = (event) => {
     event.preventDefault(); // Impede o recarregamento da página
 
@@ -22,7 +19,7 @@ function PaginaCadastro() {
     }
     setError(''); // Limpa o erro se a validação passar
 
-    // Aqui viria a lógica para enviar os dados para o seu "backend" ou API
+    // Aqui a lógica para enviar os dados para a API
     console.log('Nova conta criada com:');
     console.log('Nome:', nome);
     console.log('Email:', email);
@@ -44,7 +41,7 @@ function PaginaCadastro() {
 
           <label htmlFor="nome">Nome</label>
           <input
-            type="text" // Tipo de input corrigido para 'text'
+            type="text" 
             id="nome"
             placeholder="Digite seu nome"
             value={nome}
@@ -71,7 +68,6 @@ function PaginaCadastro() {
           
           <button type="submit" id="botao-criar">CRIAR CONTA</button>
 
-          {/* 4. O link agora aponta de volta para a página de login */}
           <Link to="/login" id="cadastro">Já possui conta? Clique aqui para entrar.</Link>
         </form>
       </div>

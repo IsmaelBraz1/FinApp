@@ -1,6 +1,5 @@
-// src/components/FormularioTransacao.jsx
 import React, { useState } from 'react';
-import '../styles/FormularioTransacao.css'; // Importando o CSS que vamos criar
+import '../styles/FormularioTransacao.css'; 
 
 function FormularioTransacao(props) {
   // Estados para cada campo do formulário
@@ -13,7 +12,7 @@ function FormularioTransacao(props) {
   const handleSubmit = (event) => {
     event.preventDefault(); // Impede o recarregamento da página
     
-    // Aqui vamos montar o objeto da transação
+    //objeto da transação
     const novaTransacao = {
       descricao,
       valor: parseFloat(valor), // Converte o valor para número
@@ -22,8 +21,8 @@ function FormularioTransacao(props) {
       categoria,
     };
     props.onAdicionar(novaTransacao);
-    //console.log('Nova Transação Submetida:', novaTransacao);
-    // 3. Limpar o formulário (opcional, mas recomendado)
+    
+    // Limpa o formulário
     setDescricao('');
     setValor('');
     setData('');

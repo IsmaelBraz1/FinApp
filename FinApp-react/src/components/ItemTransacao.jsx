@@ -1,20 +1,19 @@
-// src/components/ItemTransacao.jsx
 import React from 'react';
 import '../styles/ItemTransacao.css';
 
-// Importando os ícones que vamos usar da biblioteca 'react-icons'
 import { FaShoppingCart, FaBriefcase, FaFileInvoiceDollar, FaUsers, FaHeartbeat, FaQuestionCircle } from 'react-icons/fa';
 
 // Função auxiliar para formatar o valor
 const formatarValor = (valor) => {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 };
+
 const formatarData = (dataString) => {
-  // Adicionar 'T00:00:00' evita que o fuso horário mude a data
   const data = new Date(dataString + 'T00:00:00');
   const options = { day: '2-digit', month: 'short', year: 'numeric' };
   return data.toLocaleDateString('pt-BR', options);
 };
+
 // Função para escolher o ícone e a cor baseada na categoria
 const getEstiloCategoria = (categoria) => {
   switch (categoria.toLowerCase()) {

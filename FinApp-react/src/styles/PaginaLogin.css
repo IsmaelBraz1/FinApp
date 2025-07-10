@@ -1,5 +1,4 @@
 
-/* ESTILOS QUE ERAM DO BODY AGORA ESTÃO AQUI */
 .login-page-container {
   font-family: Arial, sans-serif;
   background: radial-gradient(circle, #182980, #061044);
@@ -12,8 +11,6 @@
   width: 100vw;
 }
 
-/* O resto do CSS (a, #logo-do-finapp, .login-container, etc.) continua igual */
-/* ... */
 
 a {
     text-decoration: none;

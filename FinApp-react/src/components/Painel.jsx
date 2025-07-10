@@ -1,23 +1,20 @@
-// src/components/Painel.jsx
 import React, { useState } from 'react';
-import MenuLateral from './MenuLateral';       // Importando os componentes que criamos
+import MenuLateral from './MenuLateral';       
 import CardResumo from './CardResumo';
 import FormularioTransacao from './FormularioTransacao';
 import ListaTransacoes from './ListaTransacoes';
-import '../styles/Painel.css';                // Importando o CSS do painel
-
-
+import '../styles/Painel.css';  
 
 
 function Painel({ transacoes, onAdicionarTransacao }) {
   // Estado para controlar a visibilidade do modal de adicionar
   const [modalVisivel, setModalVisivel] = useState(false);
 
-// Criamos uma nova lista com apenas as 4 transações mais recentes
+//  lista com apenas as 6 transações mais recentes
   const transacoesRecentes = transacoes.slice(0, 6);
   return (
     <div className="painel-container">
-      <MenuLateral /> {/* Nosso componente de menu lateral aqui */}
+      <MenuLateral />
 
       <header>
         <h1>Painel Financeiro</h1>
@@ -26,7 +23,6 @@ function Painel({ transacoes, onAdicionarTransacao }) {
 
       <main>
         <section id="grups">
-          {/* Usando nosso componente reutilizável com props diferentes */}
           <CardResumo titulo="Saldo Total" valor="R$ 12.345,67" descricao="+2.5% desde o último mês" idValor="valor1" />
           <CardResumo titulo="Renda Mensal" valor="R$ 5.800,00" descricao="Atualizado hoje" idValor="valor2" />
           <CardResumo titulo="Despesas Mensais" valor="R$ 2.150,75" descricao="75% da meta atingida" idValor="valor3" />
@@ -43,7 +39,7 @@ function Painel({ transacoes, onAdicionarTransacao }) {
 
       {/* Renderização condicional do Modal: só aparece se modalVisivel for true */}
       {modalVisivel && (
-        <div className="modal-backdrop"> {/* Adicionamos o backdrop aqui */}
+        <div className="modal-backdrop">
           <div id="adicionar">
             <div id="fechar" onClick={() => setModalVisivel(false)}>x</div>
             <FormularioTransacao onAdicionar={onAdicionarTransacao} /> 

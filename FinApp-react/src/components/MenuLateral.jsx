@@ -1,7 +1,6 @@
-// src/components/MenuLateral.jsx
 import React from 'react';
 import '../styles/Painel.css';   
-import { Link, useNavigate } from 'react-router-dom'; // Para a navegação programática
+import { Link, useNavigate } from 'react-router-dom'; // Para a navegação 
 
 function MenuLateral() {
   const navigate = useNavigate(); // Inicializa o hook de navegação

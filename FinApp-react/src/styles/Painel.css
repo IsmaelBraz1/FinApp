@@ -93,9 +93,6 @@
 
 
 .painel-container {
-    /* Removemos o margin antigo */
-
-    /* Adicionamos padding para dar espaço ao conteúdo, mas o fundo ocupa tudo */
     padding: 3rem 2rem 3rem 5.5rem; 
 
     background-color: rgb(222, 226, 230);
@@ -129,25 +126,23 @@ main{
     
 }
 
-/* src/styles/Painel.css - VERSÃO CORRIGIDA E UNIFICADA */
 
 .graf {
-  /* --- Layout Interno do Card --- */
+  /*Layout Interno do Card*/
   display: flex;
   flex-direction: column; /* Itens em coluna: Título, Valor, Descrição */
   justify-content: space-around; /* Distribui o espaço verticalmente */
   
-  /* --- Tamanho e Espaçamento --- */
-  width: 16rem;      /* Largura do card */
+  /*Tamanho e Espaçamento*/
+  width: 16rem;      
   min-height: 9rem; /* Altura MÍNIMA, mas pode crescer se o conteúdo precisar */
-  padding: 1.25rem;   /* Espaçamento interno (20px) */
-  
-  /* --- Estilo Visual --- */
+  padding: 1.25rem;  
+
   background-color: white;
-  border-radius: 1rem; /* Bordas arredondadas */
+  border-radius: 1rem; 
   color: rgba(13, 13, 44, 0.7);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
-  text-align: left; /* Alinha o texto à esquerda dentro do card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  text-align: left;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -156,7 +151,6 @@ main{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Garante que os títulos e parágrafos dentro do card não tenham margens estranhas */
 .graf h2, .graf p {
   margin: 0;
   padding: 0;
@@ -199,18 +193,14 @@ main{
     right: 1rem;
     cursor: pointer;
 }
-/* ======================================== */
-/* ESTILOS DO NOVO MODAL            */
-/* ======================================== */
 
-/* O fundo escuro que cobre a tela inteira */
 .modal-backdrop {
-  position: fixed; /* Fica fixo na tela */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6); /* Preto com 60% de opacidade */
+  background-color: rgba(0, 0, 0, 0.6); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,21 +208,21 @@ main{
   animation: fadeIn 0.3s ease; /* Animação de entrada do fundo */
 }
 
-/* O container do modal (substitui o #adicionar antigo) */
+/* O container do modal */
 #adicionar {
-  background-color: #f8f9fa; /* Um branco um pouco mais suave */
-  width: 90%; /* Ocupa 90% da largura, mas... */
-  max-width: 500px; /* ...nunca mais que 500px */
-  height: auto; /* A altura se ajusta ao conteúdo */
+  background-color: #f8f9fa; 
+  width: 90%; 
+  max-width: 500px; 
+  height: auto; 
   border-radius: 1rem;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-  position: relative; /* Para posicionar o botão 'fechar' dentro dele */
+  position: relative; 
   color: rgba(13, 13, 44, 0.8);
-  border: none; /* Remove a borda antiga */
-  animation: scaleUp 0.4s ease-out; /* Animação de entrada do modal */
+  border: none; 
+  animation: scaleUp 0.4s ease-out; 
 }
 
-/* O botão de fechar (substitui o #fechar antigo) */
+/* O botão de fechar */
 #fechar {
   position: absolute;
   top: 10px;

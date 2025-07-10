@@ -1,5 +1,4 @@
 
-/* Container principal que centraliza tudo */
 .splash-container {
     display: flex;
     justify-content: center;
@@ -7,8 +6,7 @@
     height: 100vh; /* Ocupa 100% da altura da tela */
     color: #ffffff;
     text-align: center;
-    /* Fundo com gradiente profissional */
-    background: linear-gradient(135deg, #1D2B64, #3B5998); /* Gradiente de azul escuro */
+    background: linear-gradient(135deg, #1D2B64, #3B5998); 
     padding: 20px;
 }
 
@@ -32,7 +30,7 @@
 
 /* Estilo do Logo/Título */
 .logo-text {
-    font-size: 4.5rem; /* Tamanho grande para impacto */
+    font-size: 4.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
@@ -44,11 +42,11 @@
     font-size: 1.25rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
-    max-width: 500px; /* Evita que a linha fique muito longa em telas grandes */
+    max-width: 500px; 
     opacity: 0.9;
 }
 
-/* Estilo do Botão de Ação (Call to Action) */
+/* Estilo do Botão de Ação  */
 .cta-button {
     display: inline-block;
     padding: 15px 35px;
@@ -57,7 +55,7 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
-    border-radius: 50px; /* Botão "pilula" moderno */
+    border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }

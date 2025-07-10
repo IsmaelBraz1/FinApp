@@ -60,10 +60,10 @@
 }
 
 .item-transacao:hover {
-  background-color: #f8f9fa; /* Um cinza bem claro para o fundo */
-  transform: translateY(-3px);   /* Levanta o item um pouquinho */
-  cursor: pointer;              /* Muda o cursor para a "mãozinha" */
-  border-radius: 8px;           /* Arredonda as bordas no hover para ficar mais bonito */
-  padding: 1rem;                /* Adiciona padding para o fundo não ficar colado nas bordas */
-  margin: 0 -1rem;              /* Compensa o padding para manter o alinhamento */
+  background-color: #f8f9fa; 
+  transform: translateY(-3px);  
+  cursor: pointer;              
+  border-radius: 8px;          
+  padding: 1rem;                
+  margin: 0 -1rem;              
 }
