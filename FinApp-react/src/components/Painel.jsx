@@ -28,7 +28,7 @@ function Painel({ transacoes, onAdicionarTransacao }) {
           <CardResumo titulo="Renda Mensal" valor="R$ 5.800,00" descricao="Atualizado hoje" idValor="valor2" />
           <CardResumo titulo="Despesas Mensais" valor="R$ 2.150,75" descricao="75% da meta atingida" idValor="valor3" />
         </section>
-        
+
         <section className="grafico">
           <BarChartFinanceiro />
         </section>
