@@ -4,6 +4,9 @@ import PaginaInicio from './components/PaginaInicio';
 import PaginaLogin from './components/PaginaLogin';
 import PaginaCadastro from './components/PaginaCadastro'; 
 import PaginaTransacoes from './components/PaginaTransacoes';
+import PaginaServicos from './components/PaginaServicos';
+import PaginaSobreNos from './components/PaginaSobreNos';
+import PaginaContatos from './components/PaginaContatos';
 import Painel from './components/Painel';
 
  // Dados de exemplo 
@@ -31,6 +34,10 @@ return (
     <Route path="/" element={<PaginaInicio />} />
     <Route path="/login" element={<PaginaLogin />} />
     <Route path="/cadastro" element={<PaginaCadastro />} />
+    <Route path="/servicos" element={<PaginaServicos />} />
+    <Route path="/sobre_nos" element={<PaginaSobreNos />} />
+    <Route path="/contatos" element={<PaginaContatos />} />
+
 
     {/* Passa a lista e a função para o Painel */}
     <Route 

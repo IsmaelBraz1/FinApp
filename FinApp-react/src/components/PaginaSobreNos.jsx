@@ -2,28 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import '../styles/PaginaInicio.css';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
-function PaginaInicio() {
-  
+function PaginaSobreNos() {
+
   const navigate = useNavigate();
-
-
-
   // Função que direciona para a página de cadastro ao clicar no botão CADASTRE-SE
   function ir_Para_Cadastro() {
     console.log("Fui ativado");
     navigate('/cadastro');
   }
 
-  // Função que direciona para a página de Login ao clicar no botão COMECE AGORA
-  function ir_Para_Login(){
-    console.log("Fui clicado");
-    navigate('/login');
-  }
-
- 
-//Função para botão Hamburguer- função que clica em um botão para aparecer o menu
+  //Função para botão Hamburguer- função que clica em um botão para aparecer o menu
   function toggleMenu() {
     let opcoes = document.getElementsByClassName('cabecalho-menu')[0];
     let cabecalho = document.getElementsByClassName('cabecalho')[0];
@@ -40,9 +29,12 @@ function PaginaInicio() {
     
 
   }
+
+
   
   return (
-   <div className='body'>
+    
+    <div className='body'>
             <header className="cabecalho"> 
               <div className='image-cab'>
                 <img className="cabecalho-imagem" src="/img/logo_name_finapp_azu.svg" alt="logo do FinApp"/>
@@ -62,17 +54,9 @@ function PaginaInicio() {
             <div className="conteudo">
                 <section className="conteudo-principal">
                     <div className="conteudo-principal-escr">
-                        <h1 className="titulo">Controle suas finanças com o FinApp!!</h1>
-                        <h2 className="subtitulo">Tenha o controle das suas finanças pessoais com o nosso 
-                            <strong className='destaque-name'> Web Aplicativo</strong> de gerenciamento de <strong className='destaque-name'>Finanças</strong>.</h2>
-                        <button className="botao-login" onClick={ir_Para_Login}>Comece Agora</button>
+                        <h1 className="titulo">Sobre Nós</h1>
+                        
                     </div>
-                    <img className="conteudo-principal-img" src="/img/painel na tela do note.png" alt='tela do note'/>
-                    
-                </section>
-
-                <section className="conteudo-sec">
-                    <h3 className="conteudo-sec-text"> Venha  fazer parte do nosso Web Aplicativo e tenha a facilidade de entender e controlar seu dinheiro!</h3>
                 </section>
 
             </div>
@@ -88,4 +72,4 @@ function PaginaInicio() {
   );
 }
 
-export default PaginaInicio;
+export default PaginaSobreNos;
