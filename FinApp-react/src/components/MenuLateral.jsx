@@ -21,7 +21,7 @@ function MenuLateral() {
         </div>
         <Link to="/dashboard" className="b_lat">Painel</Link>
         <Link to="/transacoes" className="b_lat">Transações</Link>
-        <button className="b_lat">Metas</button>
+        <Link to="/metas" className="b_lat">Metas</Link>
         <button className="b_lat">Configurações</button>
         <button className="b_lat" onClick={handleSair}>Sair</button>
       </div>

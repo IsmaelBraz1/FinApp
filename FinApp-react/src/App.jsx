@@ -7,6 +7,7 @@ import PaginaTransacoes from './components/PaginaTransacoes';
 import PaginaServicos from './components/PaginaServicos';
 import PaginaSobreNos from './components/PaginaSobreNos';
 import PaginaContatos from './components/PaginaContatos';
+import PaginaMetas from './components/PaginaMetas';
 import Painel from './components/Painel';
 
  // Dados de exemplo 
@@ -29,6 +30,8 @@ function App() {
     
   };
 
+
+  
 return (
   <Routes>
     <Route path="/" element={<PaginaInicio />} />
@@ -37,7 +40,7 @@ return (
     <Route path="/servicos" element={<PaginaServicos />} />
     <Route path="/sobre_nos" element={<PaginaSobreNos />} />
     <Route path="/contatos" element={<PaginaContatos />} />
-
+    <Route path="/metas" element={<PaginaMetas />} />
 
     {/* Passa a lista e a função para o Painel */}
     <Route 
