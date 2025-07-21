@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import '../styles/PaginaInicio.css';
+import '../styles/PaginaSobre_Nos.css';
 import { useNavigate } from 'react-router-dom';
 
 function PaginaSobreNos() {
@@ -55,6 +55,27 @@ function PaginaSobreNos() {
                 <section className="conteudo-principal">
                     <div className="conteudo-principal-escr">
                         <h1 className="titulo">Sobre Nós</h1>
+                        <p className="conteúdo-texto">O FinApp nasceu com um propósito claro: ajudar pessoas a retomarem o controle das suas finanças de forma simples,
+                            intuitiva e eficaz. Desenvolvido por uma equipe de estudantes da Universidade Federal do Ceará (UFC) comprometida com inovação e impacto social.
+                            O FinApp é o projeto final da disciplina de Tecnologias Web 1 e é mais do que uma ferramenta — é um aliado na sua jornada rumo à estabilidade e realização financeira.
+                        </p>
+
+                        <p className="conteúdo-texto">Nosso sistema permite que você registre e acompanhe suas receitas e despesas, classificando cada movimentação por tipo
+                            para facilitar a organização. Além disso, oferecemos uma seção de metas financeiras, para que você possa planejar o
+                            futuro com objetivos claros, sejam eles uma viagem, uma reserva de emergência ou a compra de um bem importante.
+                        </p>
+
+                        <p className="conteúdo-texto">Com nossos gráficos interativos, você visualiza sua situação financeira de forma clara e prática,
+                            tornando mais fácil entender para onde seu dinheiro está indo e como melhorar sua gestão pessoal.
+                        </p>
+
+                        <p className="conteúdo-texto">Sabemos que falar de dinheiro pode ser complicado — por isso, nossa missão é tornar esse processo
+                            mais acessível, descomplicado e, principalmente, útil para sua vida.</p>
+
+                        <p id="frase-destaque">FinApp: controle hoje, conquiste amanhã.</p>
+
+
+
                         
                     </div>
                 </section>
