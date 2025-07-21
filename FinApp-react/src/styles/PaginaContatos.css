@@ -1,0 +1,62 @@
+/* Adicione este CSS para estilizar a nova seção de contatos */
+
+.conteudo-principal {
+  padding: 2rem; /* Adiciona um respiro ao conteúdo */
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Container para os cards de contato */
+.contatos-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+  justify-content: center;
+  gap: 2rem; /* Espaço entre os cards */
+}
+
+/* Estilo individual de cada card */
+.contato-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 320px; /* Largura máxima para cada card */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contato-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+.contato-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0d0d2c;
+}
+
+.contato-card p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contato-card a {
+  background-color: #2b5bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block; /* Permite que padding seja aplicado corretamente */
+  transition: background-color 0.2s ease;
+}
+
+.contato-card a:hover {
+  background-color: #1a44e8;
+}
