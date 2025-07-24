@@ -1,0 +1,25 @@
+{
+  "name": "finapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test:unit": "jest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.2",
+    "axios": "^1.10.0",
+    "chart.js": "^4.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "jspdf": "^3.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "jest": "^30.0.3",
+    "supertest": "^7.1.1"
+  }
+}
