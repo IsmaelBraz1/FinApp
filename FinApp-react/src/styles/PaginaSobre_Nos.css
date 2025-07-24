@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.body {
+  font-size: 100%;
+  background-color: #ffffffe5;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 4px 5px 4px #d3e3f2;
+  position: fixed;
+  top: 0%;
+}
+
+.image-cab {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  left: 5%;
+  max-width: 100%;
+}
+
+.cabecalho-imagem {
+  height: 100px;
+  width: 200px;
+}
+
+.cabecalho-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  right: 5%;
+}
+
+.cabecalho-menu-opcoes {
+  color: rgb(11, 9, 160);
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+}
+
+.cabecalho-menu-opcoes:hover {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  transition: 0.1s;
+  transform: scale(1.05);
+}
+
+.cabecalho-menu-opcoes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 9, 160, 0.753);
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.2s;
+  border-radius: 8px;
+}
+
+.cabecalho-menu-opcoes:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.2s;
+}
+
+.cabecalho-menu-butao {
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #2b5bff;
+  color: #ffffff;
+  width: 120px;
+  height: 45px;
+  border: none;
+  border-radius: 60px;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0.2, 0.15);
+}
+
+.cabecalho-menu-butao:hover {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  transition: 0.1s;
+  transform: scale(1.05);
+  background-color: rgba(11, 9, 160, 0.753);
+}
+
+.conteudo {
+  padding: 120px;
+  margin-bottom: 48px;
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-principal-escr {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40px;
+  color: rgb(3, 3, 59);
+}
+
+.conteúdo-texto {
+  text-align: justify;
+  font-size: 20px;
+}
+
+#frase-destaque {
+  font-weight: 600;
+  font-size: 20px;
+}
+.menu-hamburguer {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2b5bff;
+  position: absolute;
+  right: 5%;
+  top: 10px;
+  z-index: 101;
+  visibility: hidden;
+}
+
+.rodape {
+  position: relative;
+  bottom: 0%;
+  text-align: center;
+  margin-top: 35px;
+  padding: 10px;
+  width: 100%;
+}
+
+.rodape-texto {
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .conteudo-principal {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .conteudo-principal-escr {
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+    height: 8%;
+    padding: 10px 0;
+  }
+
+  .cabecalho-menu {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+
+  .menu-hamburguer {
+    visibility: visible;
+  }
+
+  .image-cab {
+    position: static;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .cabecalho-imagem {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .conteudo {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .titulo {
+    font-size: 28px;
+  }
+
+  .cabecalho-menu-opcoes {
+    font-size: 14px;
+  }
+
+  .cabecalho-menu-butao {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .conteudo-sec-text {
+    font-size: 16px;
+  }
+
+  .rodape-texto {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cabecalho {
+    padding: 10px;
+  }
+
+  .conteudo-principal-escr {
+    gap: 20px;
+  }
+
+  .cabecalho-menu-butao {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .conteudo {
+    padding: 80px 15px;
+  }
+}

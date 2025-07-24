@@ -1,0 +1,253 @@
+
+#detalhe{
+    transform: translateX(0);
+    width: 50px;
+    height: 100%;
+    background-color: rgb(13, 13, 44);
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    gap: 3rem;
+}
+
+.ima{
+    margin: 0px 0px 1.55rem 0.3rem;
+    
+}
+
+#later:hover #opcao{
+    transform: translateX(0);
+    background-color: rgb(13, 13, 44);
+    display: flex;
+    flex-direction: column;
+    width: 16.25rem;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    gap: 0.5rem;
+    box-shadow: 0 10px 500px black;
+}
+#opcao{
+  transform: translateX(-100%);  /* sai 100% para a esquerda */
+  transition: transform .5s ease;
+   background-color: rgb(13, 13, 44);
+    display: flex;
+    flex-direction: column;
+    width: 16.25rem;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    gap: 0.5rem;
+    
+}
+
+
+
+.b_lat{
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	letter-spacing: 0.1ch;
+    border: none;
+	
+	
+	cursor: pointer;
+    background-color: rgb(13, 13, 44);
+    color: rgb(209, 222, 233);
+    text-align: initial;
+	
+	touch-action: none;
+	
+	padding: 1rem 2rem;
+    width: 13rem;
+    height: 3rem;
+    margin: 0rem 0rem 0rem 1.5rem ;
+    
+
+}
+
+.b_lat:hover{
+    background-color: rgb(64, 64, 111);
+}
+
+
+
+
+#topo{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin: 1.5rem;
+}
+#finapplogo{
+    color: rgb(58, 64, 222);
+    margin: 0.7rem 0.7rem 2rem 1.7rem;
+}
+
+
+.painel-container {
+    padding: 3rem 2rem 3rem 5.5rem; 
+
+    background-color: rgb(222, 226, 230);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh; /* Garante que o container ocupe no mínimo toda a altura da tela */
+}
+
+header{
+    font-size: large;
+    letter-spacing: 0.1rem;
+    color: rgba(13, 13, 44, 0.8);
+    line-height: 2rem;
+}
+header h1,header p{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    
+    display: grid;
+    gap: 2rem;
+    margin: 50px 0px 0px 0px;
+
+}
+
+#grups{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+
+
+.graf {
+  /*Layout Interno do Card*/
+  display: flex;
+  flex-direction: column; /* Itens em coluna: Título, Valor, Descrição */
+  justify-content: space-around; /* Distribui o espaço verticalmente */
+  
+  /*Tamanho e Espaçamento*/
+  width: 16rem;      
+  min-height: 9rem; /* Altura MÍNIMA, mas pode crescer se o conteúdo precisar */
+  padding: 1.25rem;  
+
+  background-color: white;
+  border-radius: 1rem; 
+  color: rgba(13, 13, 44, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.graf:hover {
+  transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.graf h2, .graf p {
+  margin: 0;
+  padding: 0;
+}
+
+#valor1,#valor2,#valor3{
+    font-size: 2.3rem;
+    color: black;
+}
+#valor2{
+    color: rgba(0, 128, 0, 0.821);
+}
+#valor3{
+    color: rgba(217, 8, 8, 0.814);
+}
+
+.grafico{
+    border: 1rem solid white;
+    background-color: white;
+    width: 25rem;
+    height: 25rem;
+    line-height: 1.2rem;
+    border-radius: 1rem;
+    color: rgba(13, 13, 44, 0.8);
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
+}
+#mais{
+    border: 1rem solid rgb(43, 69, 173);
+    background-color: rgb(69, 121, 204);
+    text-align: center;
+
+    line-height: 1.2rem;
+    border-radius: 100%;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.modal-backdrop {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que fique na frente de tudo */
+  animation: fadeIn 0.3s ease; /* Animação de entrada do fundo */
+}
+
+/* O container do modal */
+#adicionar {
+  background-color: #f8f9fa; 
+  width: 90%; 
+  max-width: 500px; 
+  height: auto; 
+  border-radius: 1rem;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  position: relative; 
+  color: rgba(13, 13, 44, 0.8);
+  border: none; 
+  animation: scaleUp 0.4s ease-out; 
+}
+
+/* O botão de fechar */
+#fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#fechar:hover {
+  color: #333;
+  transform: scale(1.1);
+}
+
+
+/* Animações para a entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
